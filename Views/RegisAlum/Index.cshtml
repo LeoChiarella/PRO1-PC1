@@ -1,0 +1,90 @@
+@model Pro1.Models.RegisAlum;
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Registro de alumno</h1>
+
+    <div class="container">
+        <div class="col-12">
+            <form asp-controller="RegisAlum" asp-action="Regis">
+
+                <div class="row">
+                    <div class="col-6"><strong><label asp-for="Nombres"></label></strong>
+                        <input asp-for="Nombres" class="form-control" type="text">
+                    </div>
+                    <div class="col-6"><strong><label asp-for="Apellidos"></label></strong>
+                        <input asp-for="Apellidos" class="form-control" type="text">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-6"><strong><label asp-for="Correo"></label></strong>
+                        <input asp-for="Correo" class="form-control" type="text">
+                    </div>
+                    <div class="col-6"><strong><label asp-for="Semestre"></label></strong>
+                        <input asp-for="Semestre" class="form-control" type="text">
+                    </div>
+                </div>
+
+
+
+
+
+
+                <Strong><label>Cursos</label></Strong><br>
+                <div class="row">
+
+                    <div class="col-3">
+
+                        <input asp-for="Matematica" class="form-check-input">
+                        <label asp-for="Matematica"></label><br>
+
+
+                    </div>
+                    <div class="col-3">
+
+                        <input asp-for="Lenguaje" class="form-check-input">
+                        <label asp-for="Lenguaje"></label><br>
+
+                    </div>
+                    <div class="col-3"><input asp-for="Historia" class="form-check-input">
+                        <label asp-for="Historia"></label>
+                    </div>
+
+                </div>
+
+
+
+
+
+                <br>
+                <button type="submit" class="btn btn-lg btn-primary">Registrar</button>
+                <br>
+
+
+
+
+            </form>
+            @ViewData["Nombres"]<br>
+            @ViewData["Apellidos"]<br>
+            @ViewData["Semestre"]<br>
+            @ViewData["Mensaje"]<br>
+            @ViewData["SubTotal"]<br>
+            @ViewData["IGV"]<br>
+            @ViewData["Total"]
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
